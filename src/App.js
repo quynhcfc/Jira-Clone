@@ -1,24 +1,37 @@
-import logo from './logo.svg';
-import './App.css';
+import { Router, Switch } from "react-router-dom";
+import LoginPage from "./pages/Login/LoginPage";
+import { UserLoginTemplate } from "./templates/UserLoginTemplate";
+import { history } from "./libs/History";
+import { CyberBugsTemplate } from "./templates/CyberBugsTemplate";
+import CreateProject from "./pages/CreateProjects/CreateProject";
+import ProjectManagement from "./pages/ProjectManagement/ProjectManagement";
+import DrawerCyberbugs from "./HOC/DrawerCyberbugs";
+import IndexCyberbugs from "./components/indexCyberbugs";
+import RegisterPage from "./pages/Register/RegisterPage";
+import LoadingComponent from "./components/Loading/LoadingComponent";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router history={history}>
+      <LoadingComponent />
+      <DrawerCyberbugs />
+      <Switch>
+        <UserLoginTemplate exact path="/" Component={LoginPage} />
+        <UserLoginTemplate exact path="/register" Component={RegisterPage} />
+        <CyberBugsTemplate exact path="/cyberbugs" Component={IndexCyberbugs} />
+        <CyberBugsTemplate exact path="/project" Component={CreateProject} />
+        <CyberBugsTemplate
+          exact
+          path="/projectmanagement"
+          Component={ProjectManagement}
+        />
+        <CyberBugsTemplate
+          exact
+          path="/projectdetail/:projectId"
+          Component={IndexCyberbugs}
+        />
+      </Switch>
+    </Router>
   );
 }
 
