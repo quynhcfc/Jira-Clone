@@ -102,9 +102,9 @@ const LoginCyberBugsWithFormik = withFormik({
   mapPropsToValues: () => ({ email: "", password: "" }),
 
   validationSchema: Yup.object().shape({
-    // email: Yup.string()
-    //   .required("Email is required!")
-    //   .email("Email is invalid!"),
+    email: Yup.string()
+      .required("Email is required!")
+      .email("Email is invalid!"),
     password: Yup.string()
       .min(6, "Password must have min 6 characters")
       .max(32, "Password must have max 6 characters"),
