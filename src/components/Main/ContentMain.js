@@ -19,9 +19,7 @@ export default function ContentMain(props) {
               data-target="#infoModal"
               style={{ cursor: "pointer" }}
             >
-              <p>
-                Each issue has a single reporter but can have multiple assignees
-              </p>
+              <p>Assigning task Lorem ipsum dolor sit..</p>
               <div className="block" style={{ display: "flex" }}>
                 <div className="block-left">
                   <i className="fa fa-bookmark" />
@@ -41,9 +39,7 @@ export default function ContentMain(props) {
               </div>
             </li>
             <li className="list-group-item">
-              <p>
-                Each issue has a single reporter but can have multiple assignees
-              </p>
+              <p>Description Lorem ipsum dolor sit amet.</p>
               <div className="block" style={{ display: "flex" }}>
                 <div className="block-left">
                   <i className="fa fa-check-square" />
@@ -62,7 +58,10 @@ export default function ContentMain(props) {
                 </div>
               </div>
             </li>
-            <li className="list-group-item">Vestibulum at eros</li>
+            <li className="list-group-item">
+              Note: Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              Sed, laboriosam!{" "}
+            </li>
           </ul>
         </div>
       );
