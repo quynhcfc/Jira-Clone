@@ -5,6 +5,14 @@ export class UserService extends BaseService {
     super();
   }
 
+  getUserAdmin = () => {
+    return this.get(`/Users/getUser`);
+  };
+
+  removeUserAdmin = (idUser) => {
+    return this.get(`Users/deleteUser?id=${idUser}`);
+  };
+
   getUser = (keyWord) => {
     return this.get(`/Users/getUser?keyWord=${keyWord}`);
   };

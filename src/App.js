@@ -9,6 +9,9 @@ import DrawerCyberbugs from "./HOC/DrawerCyberbugs";
 import IndexCyberbugs from "./components/indexCyberbugs";
 import RegisterPage from "./pages/Register/RegisterPage";
 import LoadingComponent from "./components/Loading/LoadingComponent";
+import LoginAdmin from "./pages/Admin/LoginAdmin";
+import ListUser from "./pages/Admin/ListUser";
+import { AdminTemplate } from "./templates/AdminTemplate";
 
 function App() {
   return (
@@ -18,6 +21,9 @@ function App() {
       <Switch>
         <UserLoginTemplate exact path="/" Component={LoginPage} />
         <UserLoginTemplate exact path="/register" Component={RegisterPage} />
+        <AdminTemplate exact path="/admin" Component={LoginAdmin} />
+        {/* <AdminTemplate exact path="/listuser" Component={ListUser} /> */}
+        <ListUser exact path="/listuser" />
         <CyberBugsTemplate exact path="/cyberbugs" Component={IndexCyberbugs} />
         <CyberBugsTemplate exact path="/project" Component={CreateProject} />
         <CyberBugsTemplate

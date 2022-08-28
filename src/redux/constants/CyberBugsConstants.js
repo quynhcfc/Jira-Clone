@@ -16,6 +16,16 @@ export const USER_SIGNUP = "USER_SIGNUP";
 
 export const USER_SIGNUP_SAGA = "USER_SIGNUP_SAGA";
 
+export const ADLOGIN = "ADLOGIN";
+
+export const ADMIN_LOGIN = "ADMIN_LOGIN";
+
+export const ADMIN_LOGIN_API = "ADMIN_LOGIN_API";
+
+export const GET_LIST_USER = "GET_LIST_USER";
+
+export const GET_LIST_USER_SAGA = "GET_LIST_USER_SAGA";
+
 export const USLOGIN = "USLOGIN";
 
 export const USER_LOGIN = "USER_LOGIN";

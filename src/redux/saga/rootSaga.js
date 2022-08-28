@@ -10,11 +10,13 @@ import * as StatusSaga from "./StatusSaga";
 export function* rootSaga() {
   yield all([
     Cyberbugs.theoDoiSignin(),
+    Cyberbugs.theoDoiAdminSigninSaga(),
     Cyberbugs.theoDoiSignup(),
     Cyberbugs.theoDoiGetUser(),
     Cyberbugs.theoDoiAddUserProject(),
     Cyberbugs.theoDoiRemoveUserProject(),
     Cyberbugs.theoDoiGetUserByProjectIdSaga(),
+    Cyberbugs.theoDoiGetListUser(),
     ProjectSaga.theoDoiDetailProjectSaga(),
     ProjectSaga.theoDoiCreateProjectSaga(),
     ProjectSaga.theoDoiGetListProjectSaga(),

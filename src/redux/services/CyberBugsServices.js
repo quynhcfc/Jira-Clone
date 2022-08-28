@@ -10,6 +10,14 @@ export const cyberBugsServices = {
     });
   },
 
+  signinAdminCyberBugs: (adminLogin) => {
+    return axios({
+      url: `${DOMAIN}/Users/signin`,
+      method: "POST",
+      data: adminLogin,
+    });
+  },
+
   signupCyberbugs: (userRegister) => {
     return axios({
       url: `${DOMAIN}/Users/signup`,
@@ -33,6 +41,7 @@ export const cyberBugsServices = {
       data: newProject,
     });
   },
+
   createProjectAuthorization: (newProject) => {
     return axios({
       url: `${DOMAIN}/Project/createProjectAuthorize`,
